@@ -27,6 +27,10 @@ export class LeoCheckBox {
    */
   @Event() leoChange: EventEmitter<boolean>;
 
+  /**
+   * Checks or unchecks the check input based on the parameter passed
+   * @param {boolean}
+   */
   @Method()
   async setChecked(checked: boolean) {
     this.el.shadowRoot.querySelector('input').checked = checked;
