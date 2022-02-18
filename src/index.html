@@ -23,12 +23,8 @@
     var button = document.getElementById('submit-button');
     var checkbox = document.getElementById('submitting-checkbox');
 
-    button.addEventListener('leoClick', () => {
-      checkbox.setChecked(true);
-    });
-    checkbox.addEventListener('leoChange', (event) => {
-      button.showLoader(event.detail);
-    });
+    button.addEventListener('leoClick', () => checkbox.setChecked(true));
+    checkbox.addEventListener('leoChange', event => button.showLoader(event.detail));
 
   </script>
 
