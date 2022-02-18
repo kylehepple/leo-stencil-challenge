@@ -48,7 +48,7 @@ export class LeoCheckBox {
       <Host>
         <input type="checkbox" name={this.name} onClick={this.onClick.bind(this)} />
         <label htmlFor={this.name}>
-          {this.label}
+          {this.label.toUpperCase()}
         </label>
       </Host>
     );

@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                  | Default   |
-| -------- | --------- | ----------- | ------------------------------------- | --------- |
-| `color`  | `color`   |             | `"primary" \| "secondary" \| "white"` | `'white'` |
+| Property | Attribute | Description               | Type                                  | Default   |
+| -------- | --------- | ------------------------- | ------------------------------------- | --------- |
+| `color`  | `color`   | The color of the spinner. | `"primary" \| "secondary" \| "white"` | `'white'` |
 
 
 ## Dependencies

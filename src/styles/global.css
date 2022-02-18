@@ -1,23 +1,30 @@
 :root {
-  --dark: #141414;
+  --dark: #264459;
   --dark-50: #898989;
   --dark-20: #d0d0d0;
   --white: #ffffff;
 
-  --primary: #fd5c3c;
-  --primary-50: #fead9d;
-  --primary-20: #feded8;
-  --primary-05: #fef6f5;
+  --primary: #00a687;
+  --primary-120: #00846c;
+  --primary-80: #00eabe;
+  --primary-50: #53ffde;
+  --primary-20: #bafff2;
 
-  --secondary: #1db667;
-  --secondary-50: #7eeab2;
-  --secondary-20: #cbf6e0;
+  --secondary: #fd5c3c;
+  --secondary-120: #f72b02;
+  --secondary-80: #fd7c63;
+  --secondary-50: #fead9d;
+  --secondary-20: #feded8;
 
   --font-family: 'Arial';
+
+  background-color: #e5e7e9;
+  font-family: var(--font-family);
 }
 
 h1 {
-  color: var(--primary, black);
-  font-family: var(--font-family, 'Open-Sans');
-  font-size: 24px;
+  color: var(--dark, black);
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 24px;
 }

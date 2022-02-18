@@ -7,6 +7,10 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class LeoLoadingIndicator {
 
+  /**
+   * The color of the spinner.
+   * @type {('white' | 'primary' | 'secondary')}
+   */
   @Prop() color: 'white' | 'primary' | 'secondary' = 'white';
 
   render() {

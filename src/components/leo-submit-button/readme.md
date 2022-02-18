@@ -24,7 +24,7 @@
 
 ### `showLoader(show?: boolean) => Promise<void>`
 
-
+Show or hide the loader based on the parameter passed
 
 #### Returns
 

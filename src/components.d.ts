@@ -22,6 +22,10 @@ export namespace Components {
         "setChecked": (checked: boolean) => Promise<void>;
     }
     interface LeoLoadingIndicator {
+        /**
+          * The color of the spinner.
+          * @type {('white' | 'primary' | 'secondary')}
+         */
         "color": 'white' | 'primary' | 'secondary';
     }
     interface LeoSubmitButton {
@@ -81,6 +85,10 @@ declare namespace LocalJSX {
         "onLeoChange"?: (event: CustomEvent<boolean>) => void;
     }
     interface LeoLoadingIndicator {
+        /**
+          * The color of the spinner.
+          * @type {('white' | 'primary' | 'secondary')}
+         */
         "color"?: 'white' | 'primary' | 'secondary';
     }
     interface LeoSubmitButton {

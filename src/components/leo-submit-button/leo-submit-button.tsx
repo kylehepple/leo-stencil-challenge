@@ -7,6 +7,8 @@ import { Component, Element, Event, EventEmitter, h, Host, Listen, Method, Prop 
 })
 export class LeoSubmitButton {
 
+  private loading: boolean = false;
+
   /**
    * Access to the element & shadowRoot
    */
@@ -41,14 +43,20 @@ export class LeoSubmitButton {
   @Listen('click')
   async showLoader(show: boolean = true) {
 
+    if (show && this.loading) {
+      return;
+    }
+
     const button = this.el.shadowRoot.querySelector('button');
 
-    button.innerHTML = (show) ? '' : this.text;
+    button.innerHTML = (show) ? '' : this.text.toUpperCase();
     button.style.pointerEvents = (show) ? 'none' : 'all';
 
     if (show) {
       button.appendChild(document.createElement('leo-loading-indicator'));
     }
+
+    this.loading = show;
 
   }
 
@@ -56,7 +64,7 @@ export class LeoSubmitButton {
     return (
       <Host>
         <button class={`btn-${this.color}`} type="button">
-          { this.text }
+          { this.text.toUpperCase() }
         </button>
       </Host>
     );

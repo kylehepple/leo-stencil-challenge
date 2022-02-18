@@ -24,7 +24,7 @@
 
 ### `setChecked(checked: boolean) => Promise<void>`
 
-
+Checks or unchecks the check input based on the parameter passed
 
 #### Returns
 
