@@ -15,6 +15,10 @@ export namespace Components {
           * The name for the LeoCheckBox
          */
         "name": string;
+        /**
+          * Checks or unchecks the check input based on the parameter passed
+          * @param
+         */
         "setChecked": (checked: boolean) => Promise<void>;
     }
     interface LeoLoadingIndicator {
@@ -25,6 +29,10 @@ export namespace Components {
           * The button color
          */
         "color": 'primary' | 'secondary';
+        /**
+          * Show or hide the loader based on the parameter passed
+          * @param show
+         */
         "showLoader": (show?: boolean) => Promise<void>;
         /**
           * The button text
