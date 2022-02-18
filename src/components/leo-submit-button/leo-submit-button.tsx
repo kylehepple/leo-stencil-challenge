@@ -1,0 +1,62 @@
+import { Component, Element, Event, EventEmitter, h, Host, Listen, Method, Prop } from '@stencil/core';
+
+@Component({
+  tag: 'leo-submit-button',
+  styleUrl: 'leo-submit-button.css',
+  shadow: true,
+})
+export class LeoSubmitButton {
+
+  /**
+   * Access to the element & shadowRoot
+   */
+  @Element() el!: HTMLLeoSubmitButtonElement;
+
+  /**
+   * The button color
+   */
+  @Prop() color: 'primary' | 'secondary' = 'primary';
+
+  /**
+   * The button text
+   */
+  @Prop() text!: string;
+
+  /**
+   *  Emitted when the button goes into loading mode
+   */
+  @Event() leoClick: EventEmitter<void>;
+
+  @Listen('click')
+  onClick() {
+
+    this.leoClick.emit();
+
+  }
+
+  @Method()
+  @Listen('click')
+  showLoader(show: boolean = true) {
+
+    const button = this.el.shadowRoot.querySelector('button');
+
+    button.innerHTML = (show) ? '' : this.text;
+    button.style.pointerEvents = (show) ? 'none' : 'all';
+
+    if (show) {
+      button.appendChild(document.createElement('leo-loading-indicator'));
+    }
+
+  }
+
+  render() {
+    return (
+      <Host>
+        <button class={`btn-${this.color}`} type="button">
+          { this.text }
+        </button>
+      </Host>
+    );
+  }
+
+}

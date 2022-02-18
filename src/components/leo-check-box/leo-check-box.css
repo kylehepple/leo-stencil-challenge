@@ -1,0 +1,10 @@
+input {
+  height: 16px;
+  margin: 20px 5px;
+  width: 16px;
+}
+
+label {
+  color: var(--dark, black);
+  font-size: 18px;
+}

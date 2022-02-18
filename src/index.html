@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>LeoVegas Stencil Challenge</title>
+
+    <link rel="stylesheet" href="/build/leo-stencil-challenge.css">
+    <script type="module" src="/build/leo-stencil-challenge.esm.js"></script>
+    <script nomodule src="/build/leo-stencil-challenge.js"></script>
+  </head>
+  <body>
+
+    <h1>Loading Button</h1>
+
+    <leo-submit-button color="primary" text="Submit" id="submit-button"></leo-submit-button>
+    <leo-check-box name="submitting" id="submitting-checkbox" label="Submitting"></leo-check-box>
+
+  </body>
+
+  <script>
+
+    var button = document.getElementById('submit-button');
+    var checkbox = document.getElementById('submitting-checkbox');
+
+    button.addEventListener('leoClick', () => {
+      checkbox.setChecked(true);
+    });
+    checkbox.addEventListener('leoChange', (event) => {
+      button.showLoader(event.detail);
+    });
+
+  </script>
+
+</html>

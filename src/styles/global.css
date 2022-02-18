@@ -1,0 +1,23 @@
+:root {
+  --dark: #141414;
+  --dark-50: #898989;
+  --dark-20: #d0d0d0;
+  --white: #ffffff;
+
+  --primary: #fd5c3c;
+  --primary-50: #fead9d;
+  --primary-20: #feded8;
+  --primary-05: #fef6f5;
+
+  --secondary: #1db667;
+  --secondary-50: #7eeab2;
+  --secondary-20: #cbf6e0;
+
+  --font-family: 'Arial';
+}
+
+h1 {
+  color: var(--primary, black);
+  font-family: var(--font-family, 'Open-Sans');
+  font-size: 24px;
+}
