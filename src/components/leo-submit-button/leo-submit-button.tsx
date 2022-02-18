@@ -36,7 +36,7 @@ export class LeoSubmitButton {
 
   @Method()
   @Listen('click')
-  showLoader(show: boolean = true) {
+  async showLoader(show: boolean = true) {
 
     const button = this.el.shadowRoot.querySelector('button');
 
