@@ -29,6 +29,7 @@ export class LeoCheckBox {
 
   /**
    * Checks or unchecks the check input based on the parameter passed
+   *
    * @param {boolean}
    */
   @Method()

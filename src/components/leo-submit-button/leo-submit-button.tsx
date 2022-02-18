@@ -34,6 +34,7 @@ export class LeoSubmitButton {
 
   /**
    * Show or hide the loader based on the parameter passed
+   *
    * @param {boolean} [show=true]
    */
   @Method()
