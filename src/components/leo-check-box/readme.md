@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property             | Attribute | Description                   | Type     | Default     |
-| -------------------- | --------- | ----------------------------- | -------- | ----------- |
-| `label` _(required)_ | `label`   | The label for the LeoCheckBox | `string` | `undefined` |
-| `name` _(required)_  | `name`    | The name for the LeoCheckBox  | `string` | `undefined` |
+| Property | Attribute | Description                   | Type     | Default     |
+| -------- | --------- | ----------------------------- | -------- | ----------- |
+| `label`  | `label`   | The label for the LeoCheckBox | `string` | `''`        |
+| `name`   | `name`    | The name for the LeoCheckBox  | `string` | `undefined` |
 
 
 ## Events

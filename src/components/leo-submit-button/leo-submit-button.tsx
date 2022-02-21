@@ -12,7 +12,7 @@ export class LeoSubmitButton {
   /**
    * Access to the element & shadowRoot
    */
-  @Element() el!: HTMLLeoSubmitButtonElement;
+  @Element() el: HTMLLeoSubmitButtonElement;
 
   /**
    * The button color
@@ -22,7 +22,7 @@ export class LeoSubmitButton {
   /**
    * The button text
    */
-  @Prop() text!: string;
+  @Prop() text: string = '';
 
   /**
    *  Emitted when the button goes into loading mode

@@ -10,17 +10,17 @@ export class LeoCheckBox {
   /**
    * Access to the element & shadowRoot
    */
-  @Element() el!: HTMLLeoCheckBoxElement;
+  @Element() el: HTMLLeoCheckBoxElement;
 
   /**
    * The label for the LeoCheckBox
    */
-  @Prop() label!: string;
+  @Prop() label: string = '';
 
   /**
    * The name for the LeoCheckBox
    */
-  @Prop() name!: string;
+  @Prop() name: string;
 
   /**
    * Emitted when the check changes

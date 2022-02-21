@@ -74,11 +74,11 @@ declare namespace LocalJSX {
         /**
           * The label for the LeoCheckBox
          */
-        "label": string;
+        "label"?: string;
         /**
           * The name for the LeoCheckBox
          */
-        "name": string;
+        "name"?: string;
         /**
           * Emitted when the check changes
          */
@@ -103,7 +103,7 @@ declare namespace LocalJSX {
         /**
           * The button text
          */
-        "text": string;
+        "text"?: string;
     }
     interface IntrinsicElements {
         "leo-check-box": LeoCheckBox;

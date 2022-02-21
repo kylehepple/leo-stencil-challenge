@@ -5,28 +5,17 @@ describe('leo-loading-indicator', () => {
     const page = await newE2EPage();
 
     await page.setContent('<leo-loading-indicator></leo-loading-indicator>');
-    const element = await page.find('leo-loading-indicator');
-    expect(element).toHaveClass('hydrated');
-  });
-
-  it('renders changes to the name data', async () => {
-    const page = await newE2EPage();
-
-    await page.setContent('<leo-loading-indicator></leo-loading-indicator>');
     const component = await page.find('leo-loading-indicator');
     const element = await page.find('leo-loading-indicator >>> div');
-    expect(element.textContent).toEqual(`Hello, World! I'm `);
+    expect(component).toHaveClass('hydrated');
+    expect(element).toHaveClass('loader-white');
+  });
 
-    component.setProperty('first', 'James');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James`);
+  it('renders with the correct color class', async () => {
+    const page = await newE2EPage();
 
-    component.setProperty('last', 'Quincy');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Quincy`);
-
-    component.setProperty('middle', 'Earl');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Earl Quincy`);
+    await page.setContent('<leo-loading-indicator color="primary"></leo-loading-indicator>');
+    const element = await page.find('leo-loading-indicator >>> div');
+    expect(element).toHaveClass('loader-primary');
   });
 });

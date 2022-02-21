@@ -9,24 +9,24 @@ describe('leo-check-box', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('renders changes to the name data', async () => {
+  it('renders changes to the name', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<leo-check-box></leo-check-box>');
-    const component = await page.find('leo-check-box');
-    const element = await page.find('leo-check-box >>> div');
-    expect(element.textContent).toEqual(`Hello, World! I'm `);
+    await page.setContent('<leo-check-box name="testing-name"></leo-check-box>');
+    const input = await page.find('leo-check-box >>> input');
+    const label = await page.find('leo-check-box >>> label');
 
-    component.setProperty('first', 'James');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James`);
-
-    component.setProperty('last', 'Quincy');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Quincy`);
-
-    component.setProperty('middle', 'Earl');
-    await page.waitForChanges();
-    expect(element.textContent).toEqual(`Hello, World! I'm James Earl Quincy`);
+    expect(input.getAttribute('name')).toEqual('testing-name');
+    expect(label.getAttribute('for')).toEqual('testing-name');
   });
+
+  it('renders and sets the label to uppercase', async () => {
+    const page = await newE2EPage();
+
+    await page.setContent('<leo-check-box label="testing-label"></leo-check-box>');
+    const label = await page.find('leo-check-box >>> label');
+
+    expect(label.innerHTML).toEqual('TESTING-LABEL');
+  });
+
 });

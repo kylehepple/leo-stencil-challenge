@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property            | Attribute | Description      | Type                       | Default     |
-| ------------------- | --------- | ---------------- | -------------------------- | ----------- |
-| `color`             | `color`   | The button color | `"primary" \| "secondary"` | `'primary'` |
-| `text` _(required)_ | `text`    | The button text  | `string`                   | `undefined` |
+| Property | Attribute | Description      | Type                       | Default     |
+| -------- | --------- | ---------------- | -------------------------- | ----------- |
+| `color`  | `color`   | The button color | `"primary" \| "secondary"` | `'primary'` |
+| `text`   | `text`    | The button text  | `string`                   | `''`        |
 
 
 ## Events
